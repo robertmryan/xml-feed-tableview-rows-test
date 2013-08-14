@@ -119,9 +119,14 @@
 
         City *city  = [[City alloc] initWithName:self.name temperature:self.temp];
 
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            self.cityCompletion(city);
-        }];
+        // only try to call completion block if it exists
+        
+        if (self.cityCompletion)
+        {
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                self.cityCompletion(city);
+            }];
+        }
 
         self.executing = NO;
         self.finished = YES;
