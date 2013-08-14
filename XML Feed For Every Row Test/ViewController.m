@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "CityCell.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) NSArray *objects;
 
 @end
 
@@ -17,13 +20,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    self.objects = @[@"2502265", @"2369745", @"2459115", @"2391585", @"2389628", @"615702", @"650272", @"2379574"];
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.objects count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"CityCell";
+    CityCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+
+    NSString *key = self.objects[indexPath.row];
+    [cell updateWithKey:key tableView:tableView indexPath:indexPath];
+
+    return cell;
 }
 
 @end

@@ -18,6 +18,10 @@
 		8311C6BF17BBD0EE00486137 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8311C6BE17BBD0EE00486137 /* Default-568h@2x.png */; };
 		8311C6C217BBD0EE00486137 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8311C6C017BBD0EE00486137 /* MainStoryboard.storyboard */; };
 		8311C6C517BBD0EE00486137 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C6C417BBD0EE00486137 /* ViewController.m */; };
+		8311C6D317BBD10B00486137 /* NetworkQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C6CC17BBD10B00486137 /* NetworkQueueManager.m */; };
+		8311C6D417BBD10B00486137 /* CityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C6CE17BBD10B00486137 /* CityCell.m */; };
+		8311C6D517BBD10B00486137 /* CityOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C6D017BBD10B00486137 /* CityOperation.m */; };
+		8311C6D617BBD10B00486137 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C6D217BBD10B00486137 /* City.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,16 @@
 		8311C6C117BBD0EE00486137 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8311C6C317BBD0EE00486137 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8311C6C417BBD0EE00486137 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8311C6CB17BBD10B00486137 /* NetworkQueueManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkQueueManager.h; sourceTree = "<group>"; };
+		8311C6CC17BBD10B00486137 /* NetworkQueueManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkQueueManager.m; sourceTree = "<group>"; };
+		8311C6CD17BBD10B00486137 /* CityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityCell.h; sourceTree = "<group>"; };
+		8311C6CE17BBD10B00486137 /* CityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityCell.m; sourceTree = "<group>"; };
+		8311C6CF17BBD10B00486137 /* CityOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityOperation.h; sourceTree = "<group>"; };
+		8311C6D017BBD10B00486137 /* CityOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityOperation.m; sourceTree = "<group>"; };
+		8311C6D117BBD10B00486137 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		8311C6D217BBD10B00486137 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		8311C6DA17BBD35B00486137 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
+		833D28D517BBDBCF00B22F9C /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,8 @@
 		8311C69C17BBD0EE00486137 = {
 			isa = PBXGroup;
 			children = (
+				8311C6DA17BBD35B00486137 /* README.md */,
+				833D28D517BBDBCF00B22F9C /* LICENSE */,
 				8311C6AE17BBD0EE00486137 /* XML Feed For Every Row Test */,
 				8311C6A717BBD0EE00486137 /* Frameworks */,
 				8311C6A617BBD0EE00486137 /* Products */,
@@ -86,8 +102,9 @@
 				8311C6B717BBD0EE00486137 /* AppDelegate.h */,
 				8311C6B817BBD0EE00486137 /* AppDelegate.m */,
 				8311C6C017BBD0EE00486137 /* MainStoryboard.storyboard */,
-				8311C6C317BBD0EE00486137 /* ViewController.h */,
-				8311C6C417BBD0EE00486137 /* ViewController.m */,
+				8311C6D717BBD1EF00486137 /* City View Controller and Cell */,
+				8311C6D917BBD21400486137 /* Network Queue */,
+				8311C6D817BBD20500486137 /* Model */,
 				8311C6AF17BBD0EE00486137 /* Supporting Files */,
 			);
 			path = "XML Feed For Every Row Test";
@@ -105,6 +122,37 @@
 				8311C6BE17BBD0EE00486137 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8311C6D717BBD1EF00486137 /* City View Controller and Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8311C6C317BBD0EE00486137 /* ViewController.h */,
+				8311C6C417BBD0EE00486137 /* ViewController.m */,
+				8311C6CD17BBD10B00486137 /* CityCell.h */,
+				8311C6CE17BBD10B00486137 /* CityCell.m */,
+			);
+			name = "City View Controller and Cell";
+			sourceTree = "<group>";
+		};
+		8311C6D817BBD20500486137 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8311C6D117BBD10B00486137 /* City.h */,
+				8311C6D217BBD10B00486137 /* City.m */,
+				8311C6CF17BBD10B00486137 /* CityOperation.h */,
+				8311C6D017BBD10B00486137 /* CityOperation.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8311C6D917BBD21400486137 /* Network Queue */ = {
+			isa = PBXGroup;
+			children = (
+				8311C6CB17BBD10B00486137 /* NetworkQueueManager.h */,
+				8311C6CC17BBD10B00486137 /* NetworkQueueManager.m */,
+			);
+			name = "Network Queue";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +224,10 @@
 				8311C6B517BBD0EE00486137 /* main.m in Sources */,
 				8311C6B917BBD0EE00486137 /* AppDelegate.m in Sources */,
 				8311C6C517BBD0EE00486137 /* ViewController.m in Sources */,
+				8311C6D317BBD10B00486137 /* NetworkQueueManager.m in Sources */,
+				8311C6D417BBD10B00486137 /* CityCell.m in Sources */,
+				8311C6D517BBD10B00486137 /* CityOperation.m in Sources */,
+				8311C6D617BBD10B00486137 /* City.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +350,7 @@
 				8311C6CA17BBD0EE00486137 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
