@@ -11,8 +11,8 @@
 
 @interface CityOperation () <NSURLConnectionDataDelegate, NSXMLParserDelegate>
 
-@property (nonatomic, getter = isFinished)  BOOL finished;
-@property (nonatomic, getter = isExecuting) BOOL executing;
+@property (nonatomic, readwrite, getter = isFinished)  BOOL finished;
+@property (nonatomic, readwrite, getter = isExecuting) BOOL executing;
 
 @property (nonatomic, strong) NSMutableData *responseData;
 
@@ -23,6 +23,9 @@
 @end
 
 @implementation CityOperation
+
+@synthesize executing = _executing;
+@synthesize finished  = _finished;
 
 - (id)initWithWoeid:(NSString *)woeid successBlock:(CityCompletion)completion
 {
